@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.akitaxi_usuario.julio.my_tabhost" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Tab_January">
+        </activity>
+        <activity
+            android:name=".Tab_February">
+        </activity>
+        <activity
+            android:name=".Tab_March">
+        </activity>
+        <activity
+            android:name=".Tab_April">
+        </activity>
+        <activity
+            android:name=".Tab_May">
+        </activity>
+        <activity
+            android:name=".Tab_June">
+        </activity>
+        <activity
+            android:name=".Tab_July">
+        </activity>
+        <activity
+            android:name=".Tab_August">
+        </activity>
+        <activity
+            android:name=".Tab_September">
+        </activity>
+        <activity
+            android:name=".Tab_October">
+        </activity>
+        <activity
+            android:name=".Tab_November">
+        </activity>
+        <activity
+            android:name=".Tab_December">
+        </activity>
+    </application>
+
+</manifest>

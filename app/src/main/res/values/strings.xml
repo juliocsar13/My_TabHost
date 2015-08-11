@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">My_TabHost</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="two">Page number two</string>
+    <string name="four">Page number four</string>
+    <string name="three">Page number three</string>
+    <string name="one">Page number one</string>
+    <string name="five">Page number five</string>
+    <string name="six">Page number six</string>
+    <string name="one_indicator">enero</string>
+    <string name="two_indicator">febrero</string>
+    <string name="three_indicator">marzo</string>
+    <string name="four_indicator">abril</string>
+    <string name="five_indicator">mayo</string>
+    <string name="six_indicator">junio</string>
+    <string name="seven_indicator">julio</string>
+    <string name="eight_indicator">agosto</string>
+    <string name="nine_indicator">septiembre</string>
+    <string name="then_indicator">octubre</string>
+    <string name="elven_indicator">noviembre</string>
+    <string name="twelve_indicator">diciembre</string>
+    <string name="title_activity_history2">History2Activity</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
