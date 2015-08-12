@@ -1,15 +1,10 @@
 package app.akitaxi_usuario.julio.my_tabhost;
 
-import android.app.ActionBar;
-import android.app.FragmentTransaction;
-import android.content.Context;
-import android.graphics.Color;
+
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-
 
 
 public class MainActivity extends FragmentActivity {
@@ -26,5 +21,6 @@ public class MainActivity extends FragmentActivity {
         viewPager.setAdapter(new HistoryPageAdapter(getSupportFragmentManager(),MainActivity.this));
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+
     }
 }
