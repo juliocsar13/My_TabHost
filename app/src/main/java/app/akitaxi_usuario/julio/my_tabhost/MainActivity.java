@@ -29,6 +29,9 @@ public class MainActivity extends FragmentActivity {
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 */
+
+        lvPrueba = (ListView) findViewById(R.id.lvprueba);
+
         Entry entry = new Entry();
         entry.company = "aaaaa";
         entry.address = "bbbbb";
@@ -36,7 +39,7 @@ public class MainActivity extends FragmentActivity {
         entry.phone = "dddddd";
         entry.name = "eeeeee";
 
-        lvAdapter = new HistoryAdapter(this);
+        lvAdapter = new HistoryAdapter();
         history.add(entry);
         lvAdapter.setData(history);
         lvPrueba.setAdapter(lvAdapter);

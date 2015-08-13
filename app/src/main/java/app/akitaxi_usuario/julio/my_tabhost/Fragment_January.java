@@ -51,26 +51,6 @@ public class Fragment_January extends Fragment {
 
 
 
-        /*name = new String[] { "julio", "csa", "3", "4", "5" };
-
-        address = new String[] { "China", "India", "United States",
-                "Indonesia", "Brazil" };
-
-        phone = new String[] { "1,354,040,000", "1,210,193,422",
-                "315,761,000", "237,641,326", "193,946,886" };
-
-        autoplate = new String[] { "1,354,040,000", "1,210,193,422",
-                "315,761,000", "237,641,326", "193,946,886" };
-
-        company = new String[] { "1,354,040,000", "1,210,193,422",
-                "315,761,000", "237,641,326", "193,946,886" };
-
-        lvJanuary = (ListView) view.findViewById(R.id.lvJanuary);
-
-        adapter = new ListViewAdapter(getActivity(), name, phone, address, autoplate, company);
-        lvJanuary.setAdapter(adapter);*/
-
-
         return view;
     }
 

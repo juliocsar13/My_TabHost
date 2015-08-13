@@ -38,21 +38,20 @@ public class HistoryAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {
 
-        View row =  view;
-        if(row  == null) {
-
+        if(view  == null) {
             LayoutInflater mLayoutInflanter = (LayoutInflater) ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            row = mLayoutInflanter.inflate(R.layout.listview_history, null);
+            view = mLayoutInflanter.inflate(R.layout.listview_history, null);
             holder = new ViewHolder();
 
-        }
-            holder.txtListName = (TextView) row.findViewById(R.id.txtListName);
-            holder.txtListAutoPlate = (TextView) row.findViewById(R.id.txtListPhone);
-            holder.txtListPhone = (TextView) row.findViewById(R.id.txtListPhone);
-            holder.txtListCompany = (TextView) row.findViewById(R.id.txtListCompany);
-            holder.txtListAddress = (TextView) row.findViewById(R.id.txtListAddress);
+            holder.txtListName          = (TextView) view.findViewById(R.id.txtListName);
+            holder.txtListAutoPlate     = (TextView) view.findViewById(R.id.txtListPhone);
+            holder.txtListPhone         = (TextView) view.findViewById(R.id.txtListPhone);
+            holder.txtListCompany       = (TextView) view.findViewById(R.id.txtListCompany);
+            holder.txtListAddress       = (TextView) view.findViewById(R.id.txtListAddress);
 
-            holder = (ViewHolder) row.getTag();
+            view.setTag(holder);
+        }else
+            holder = (ViewHolder) view.getTag();
 
 
         holder.txtListName.setText((history.get(position).getName()));
@@ -61,7 +60,7 @@ public class HistoryAdapter extends BaseAdapter {
         holder.txtListCompany.setText((history.get(position).getCompany()));
         holder.txtListAddress.setText((history.get(position).getAddress()));
 
-        return row;
+        return view;
 
     }
     private class ViewHolder{

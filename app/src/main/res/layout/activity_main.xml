@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.design.widget.TabLayout
+<!--    <android.support.design.widget.TabLayout
         android:id="@+id/tabs"
         style="@style/MyCustomTabLayout2"
         android:layout_width="match_parent"
@@ -15,8 +15,11 @@
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/white" />
-
+        android:background="@android:color/white" />-->
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lvprueba"/>
 </LinearLayout>
 
 
