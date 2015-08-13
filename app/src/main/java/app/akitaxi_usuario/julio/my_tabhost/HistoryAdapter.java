@@ -18,8 +18,13 @@ import java.util.ArrayList;
 public class HistoryAdapter extends BaseAdapter {
 
     private ArrayList<Entry> history;
-    private LayoutInflater mLayoutInflanter = (LayoutInflater) App.getInstance().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
     ViewHolder holder;
+    Context ctx;
+    public HistoryAdapter (Context context){
+        super();
+        ctx = context;
+    }
 
     public void setData(ArrayList<Entry> _history){
         history = _history;
@@ -33,34 +38,38 @@ public class HistoryAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {
 
-        if(view==null){
+        View row =  view;
+        if(row  == null) {
+
+            LayoutInflater mLayoutInflanter = (LayoutInflater) ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            row = mLayoutInflanter.inflate(R.layout.listview_history, null);
             holder = new ViewHolder();
-            view = mLayoutInflanter.inflate(R.layout.listview_history,null);
-
-            holder.txtListName = (TextView) view.findViewById(R.id.txtListName);
-            holder.txtListAutoPlate = (TextView) view.findViewById(R.id.txtListPhone);
-            holder.txtListPhone = (TextView) view.findViewById(R.id.txtListPhone);
-            holder.txtListCompany = (TextView) view.findViewById(R.id.txtListCompany);
-            holder.txtListAddress = (TextView) view.findViewById(R.id.txtListAddress);
 
         }
-        else {
-            holder = (ViewHolder) view.getTag();
-        }
+            holder.txtListName = (TextView) row.findViewById(R.id.txtListName);
+            holder.txtListAutoPlate = (TextView) row.findViewById(R.id.txtListPhone);
+            holder.txtListPhone = (TextView) row.findViewById(R.id.txtListPhone);
+            holder.txtListCompany = (TextView) row.findViewById(R.id.txtListCompany);
+            holder.txtListAddress = (TextView) row.findViewById(R.id.txtListAddress);
+
+            holder = (ViewHolder) row.getTag();
+
+
         holder.txtListName.setText((history.get(position).getName()));
         holder.txtListPhone.setText((history.get(position).getPhone()));
         holder.txtListAutoPlate.setText((history.get(position).getAutoplate()));
         holder.txtListCompany.setText((history.get(position).getCompany()));
         holder.txtListAddress.setText((history.get(position).getAddress()));
 
-        return view;
+        return row;
+
     }
     private class ViewHolder{
              TextView  txtListName;
-             TextView      txtListAutoPlate;
-             TextView        txtListPhone;
-             TextView         txtListAddress;
-             TextView         txtListCompany;
+             TextView  txtListAutoPlate;
+             TextView  txtListPhone;
+             TextView  txtListAddress;
+             TextView  txtListCompany;
         }
     @Override
     public int getCount() {
