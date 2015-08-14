@@ -20,9 +20,7 @@ public class Fragment_January extends Fragment {
 
     ListView lvJanuary;
     View view;
-    ListViewAdapter adapter;
     HistoryAdapter lvAdapter;
-    Context context;
     ArrayList<Entry> history = new ArrayList<Entry>();
 
 
@@ -37,7 +35,7 @@ public class Fragment_January extends Fragment {
         // Inflate the layout for this fragment
         view =  inflater.inflate(R.layout.fragment_blank, container, false);
 
-        lvJanuary  = (ListView) view.findViewById(R.id.lvJanuary);
+        lvJanuary = (ListView) view.findViewById(R.id.lvJanuary);
 
         Entry entry = new Entry();
         entry.company = "aaaaa";
@@ -46,7 +44,9 @@ public class Fragment_January extends Fragment {
         entry.phone = "dddddd";
         entry.name = "eeeeee";
 
+        lvAdapter = new HistoryAdapter(view.getContext());
         history.add(entry);
+        lvAdapter.setData(history);
         lvJanuary.setAdapter(lvAdapter);
 
 

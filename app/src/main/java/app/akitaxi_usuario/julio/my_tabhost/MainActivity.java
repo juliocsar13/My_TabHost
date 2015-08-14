@@ -5,44 +5,46 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
+
+import com.astuetz.PagerSlidingTabStrip;
 
 import java.util.ArrayList;
 
 
-public class MainActivity extends FragmentActivity {
-
+public class MainActivity extends AppCompatActivity {
 
     TabLayout tabLayout;
     ViewPager viewPager;
-    HistoryAdapter lvAdapter;
-    ListView lvPrueba;
+    Toolbar toolbar;
 
-    ArrayList<Entry> history = new ArrayList<Entry>();
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        /*viewPager = (ViewPager) findViewById(R.id.pager);
+
+        setToolbar();
+        viewPager = (ViewPager) findViewById(R.id.pager);
         viewPager.setAdapter(new HistoryPageAdapter(getSupportFragmentManager(),MainActivity.this));
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
-*/
 
-        lvPrueba = (ListView) findViewById(R.id.lvprueba);
+    }
+    public void setToolbar(){
 
-        Entry entry = new Entry();
-        entry.company = "aaaaa";
-        entry.address = "bbbbb";
-        entry.autoplate = "cccccc";
-        entry.phone = "dddddd";
-        entry.name = "eeeeee";
-
-        lvAdapter = new HistoryAdapter();
-        history.add(entry);
-        lvAdapter.setData(history);
-        lvPrueba.setAdapter(lvAdapter);
-
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        final ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            // Poner ícono del drawer toggle
+            //actionBar.setHomeAsUpIndicator(R.drawable.ic_launcher);
+            actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+            actionBar.setCustomView(R.layout.layout_logo_bar);
+            //actionBar.setDisplayHomeAsUpEnabled(true);
+        }
     }
 }

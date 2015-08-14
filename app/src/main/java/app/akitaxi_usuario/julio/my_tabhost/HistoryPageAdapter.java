@@ -14,7 +14,7 @@ public class HistoryPageAdapter extends FragmentPagerAdapter {
     final int PAGE_COUNT= 3;
     Context context;
 
-    private String tabTitles[] = new String[] { "Tab1", "Tab2", "Tab3" };
+    private String tabTitles[] = new String[] { "ENERO", "FEBRERO", "MARZO" };
     public HistoryPageAdapter(FragmentManager fm, Context context) {
         super(fm);
         this.context = context;

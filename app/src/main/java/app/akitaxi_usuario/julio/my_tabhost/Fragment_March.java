@@ -19,9 +19,10 @@ public class Fragment_March extends Fragment {
 
     View view;
     ListView lvMarch;
-    ArrayList<Entry> historyData = new ArrayList<Entry>();
+    ArrayList<Entry> history = new ArrayList<Entry>();
     HistoryAdapter lvAdapter;
-    ListViewAdapter adapter;
+
+
     public Fragment_March() {
         // Required empty public constructor
     }
@@ -33,6 +34,8 @@ public class Fragment_March extends Fragment {
         // Inflate the layout for this fragment
         view =  inflater.inflate(R.layout.fragment_blank3, container, false);
 
+        lvMarch = (ListView) view.findViewById(R.id.lvMarch);
+
         Entry entry = new Entry();
         entry.company = "aaaaa";
         entry.address = "bbbbb";
@@ -40,29 +43,11 @@ public class Fragment_March extends Fragment {
         entry.phone = "dddddd";
         entry.name = "eeeeee";
 
-        historyData.add(entry);
-
+        lvAdapter = new HistoryAdapter(view.getContext());
+        history.add(entry);
+        lvAdapter.setData(history);
         lvMarch.setAdapter(lvAdapter);
-        lvAdapter.setData(historyData);
 
-        /*name = new String[] { "julio", "csa", "3", "4", "5" };
-
-        address = new String[] { "China", "India", "United States",
-                "Indonesia", "Brazil" };
-
-        phone = new String[] { "1,354,040,000", "1,210,193,422",
-                "315,761,000", "237,641,326", "193,946,886" };
-
-        autoplate = new String[] { "1,354,040,000", "1,210,193,422",
-                "315,761,000", "237,641,326", "193,946,886" };
-
-        company = new String[] { "1,354,040,000", "1,210,193,422",
-                "315,761,000", "237,641,326", "193,946,886" };
-
-       lvMarch = (ListView) view.findViewById(R.id.lvMarch);
-
-       adapter = new ListViewAdapter(getActivity(), name, phone, address, autoplate, company);
-       lvMarch.setAdapter(adapter);*/
     return view;
     }
 
