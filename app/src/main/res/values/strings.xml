@@ -27,6 +27,12 @@
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>
 
+    <string name="history.list.view.name">Nombre :</string>
+    <string name="history.list.view.phone">Telefono :</string>
+    <string name="history.list.view.autoplate">Placa :</string>
+    <string name="history.list.view.company">compañia :</string>
+    <string name="history.list.view.address">Direccion :</string>
+    <string name="history.list.view.date">Fecha :</string>
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
